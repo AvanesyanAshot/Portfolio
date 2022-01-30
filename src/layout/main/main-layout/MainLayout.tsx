@@ -7,9 +7,11 @@ const MainLayout: React.FunctionComponent<IMainLayoutProps> = ({
   children,
 }) => {
   return (
-    <div>
-      <Header />
-      <div>{children}</div>
+    <div className="section">
+      <div className="container">
+        <Header />
+        <main className="main">{children}</main>
+      </div>
     </div>
   );
 };
