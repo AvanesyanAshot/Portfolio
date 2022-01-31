@@ -3,6 +3,7 @@ import css from "./Home.module.css";
 import clsx from "clsx";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
 import { ReactComponent as Mouse } from "../../assets/svg/mouse.svg";
+import Button from "../../uikit/button/Button";
 
 const Home = () => {
   return (
@@ -13,10 +14,8 @@ const Home = () => {
           <h1 className={css.name}>Ashot</h1>
           <h3 className={css.education}>Frontend Developer</h3>
           <div className={css.buttons}>
-            <a download="" href="#s" className={css.button}>
-              Download CV
-            </a>
-            <a href="#about">About me</a>
+            <Button bStyle="ghost">Download CV</Button>
+            <Button>About me</Button>
           </div>
         </div>
 

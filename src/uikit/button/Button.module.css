@@ -1,0 +1,39 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  border-radius: 0.5rem;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+  color: var(--body-color);
+}
+
+.ghost {
+  background: transparent;
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
+}
+
+.button__icon {
+  margin-right: 1rem;
+}
+
+.sm {
+  padding: 0.5rem 1.5rem;
+  font-weight: var(--font-medium);
+}
+
+.md {
+  padding: 1rem 2rem;
+  font-weight: var(--font-medium);
+}
+
+.lg {
+  padding: 1rem 4rem;
+  font-weight: var(--font-semibold);
+}
