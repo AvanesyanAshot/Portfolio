@@ -1,34 +1,14 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--body-color);
-  z-index: var(--z-index);
-}
-
-nav {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__logo {
-  color: var(--first-color);
-  font-weight: var(--font-medium);
-  transition: 0.4s;
-}
-
-.nav__logo:hover {
-  color: var(--first-color-alt);
-}
-
 .nav__menu {
-  position: fixed;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
   bottom: 1rem;
+  margin: 0 auto;
   background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
-  width: 90%;
+  width: 60%;
   border-radius: 4rem;
   padding: 1rem 2.25rem;
   backdrop-filter: blur(10px);
@@ -38,6 +18,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 
 .nav__link {
