@@ -7,6 +7,10 @@
   z-index: var(--z-index);
 }
 
+.scroll__header {
+  box-shadow: 0 4px 4px hsla(0, 4%, 4%, 0.3);
+}
+
 nav {
   height: var(--header-height);
   display: flex;
