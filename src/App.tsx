@@ -5,12 +5,11 @@ import NavMenu from "./components/nav-menu/NavMenu";
 
 const App = () => {
   return (
-    <>
+    <div className="content">
       <Home />
       <About />
-
       <NavMenu />
-    </>
+    </div>
   );
 };
 

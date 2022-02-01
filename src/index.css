@@ -53,6 +53,7 @@ html {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow-y: hidden;
 }
 
 body,
@@ -89,10 +90,20 @@ img {
   height: auto;
 }
 
+.content {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
 .container {
-  /* max-width: 968px; */
-  margin-left: 4rem;
-  margin-right: 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 5px;
 }
 
 .grid {
@@ -123,4 +134,19 @@ img {
   display: block;
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--second-hue), 8%, 38%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--second-hue), 8%, 26%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--second-hue), 8%, 20%);
 }
