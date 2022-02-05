@@ -14,17 +14,17 @@ const Skills = () => {
           <div className={css.data}>
             <div className={css.group}>
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>HTML</h3>
                 <span className={css.box__level}>Basic</span>
               </div>
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>Css</h3>
                 <span className={css.box__level}>Advanced</span>
               </div>
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>JavaScript</h3>
                 <span className={css.box__level}>Intermediate</span>
               </div>
@@ -34,12 +34,12 @@ const Skills = () => {
                 <span className={css.box__level}>Intermediate</span>
               </div> */}
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>React</h3>
                 <span className={css.box__level}>Intermediate</span>
               </div>
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>JavaScript</h3>
                 <span className={css.box__level}>Intermediate</span>
               </div>
@@ -51,29 +51,27 @@ const Skills = () => {
           <div className={css.data}>
             <div className={css.group}>
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>Node js</h3>
                 <span className={css.box__level}>Basic</span>
               </div>
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>Python</h3>
                 <span className={css.box__level}>Basic</span>
               </div>
               <div className={css.box}>
-                <Check />
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>Sql</h3>
                 <span className={css.box__level}>Intermediate</span>
               </div>
               <div className={css.box}>
-                <Check />
-
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>Next js</h3>
                 <span className={css.box__level}>Intermediate</span>
               </div>
               <div className={css.box}>
-                <Check />
-
+                <Check className={css.icon} />
                 <h3 className={css.box__title}>Docker</h3>
                 <span className={css.box__level}>Basic</span>
               </div>
