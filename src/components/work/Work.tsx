@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import React from "react";
-import Button from "../../uikit/button/Button";
-import css from "./Work.module.css";
 import { ReactComponent as Right } from "../../assets/svg/arrow-right.svg";
+import css from "./Work.module.css";
 const Work = () => {
   return (
     <section className={clsx(css.work, "section")} id="work">
