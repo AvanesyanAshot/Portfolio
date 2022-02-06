@@ -3,6 +3,7 @@ import About from "./components/about/About";
 import Home from "./components/home/Home";
 import NavMenu from "./components/nav-menu/NavMenu";
 import Skills from "./components/skills/Skills";
+import Work from "./components/work/Work";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Home />
       <About />
       <Skills />
+      <Work />
       <NavMenu />
     </div>
   );
