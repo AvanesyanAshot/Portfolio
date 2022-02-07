@@ -2,6 +2,8 @@ import React from "react";
 import css from "./Home.module.css";
 import clsx from "clsx";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
+import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
+
 import { ReactComponent as Mouse } from "../../assets/svg/mouse.svg";
 import Button from "../../uikit/button/Button";
 
@@ -29,6 +31,12 @@ const Home = () => {
             className={css.social__link}
           >
             <Github />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ashot-avanesyan-829b94230/"
+            className={css.social__link}
+          >
+            <Linkedin />
           </a>
         </div>
         <a href="#about" className={css.scroll}>
