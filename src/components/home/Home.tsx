@@ -8,7 +8,7 @@ import Button from "../../uikit/button/Button";
 
 const Home = () => {
   return (
-    <section className={clsx(css.home, "section")}>
+    <section className={clsx(css.home, "section")} id="home">
       <div className={clsx(css.container, "container", "grid")}>
         <div className={css.data}>
           <span className={css.greeting}>Hello I'm</span>
