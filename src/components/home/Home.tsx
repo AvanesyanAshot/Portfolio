@@ -3,7 +3,6 @@ import css from "./Home.module.css";
 import clsx from "clsx";
 import { ReactComponent as Github } from "../../assets/svg/github.svg";
 import { ReactComponent as Linkedin } from "../../assets/svg/linkedin.svg";
-
 import { ReactComponent as Mouse } from "../../assets/svg/mouse.svg";
 import Button from "../../uikit/button/Button";
 
