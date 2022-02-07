@@ -115,7 +115,7 @@ section {
 }
 
 .section {
-  padding: 4rem 0.1rem;
+  padding: 4rem 0 1rem;
 }
 
 .section__title,
