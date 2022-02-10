@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import css from "./Header.module.css";
-import { ReactComponent as Theme } from "../../../assets/svg/moon.svg";
+import { ReactComponent as Moon } from "../../../assets/svg/moon.svg";
+import { ReactComponent as Sun } from "../../../assets/svg/sun.svg";
+
 import clsx from "clsx";
 import NavMenu from "../../../components/nav-menu/NavMenu";
+import useDarkMode from "../../../hooks/useDarkMode";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode();
   useEffect(() => {
     window.addEventListener("scroll", () => setScroll(window.scrollY > 40));
     return () => {
@@ -23,7 +27,16 @@ const Header = () => {
           Ashot
         </Link>
         <NavMenu />
-        <Theme />
+
+        {!darkMode ? (
+          <span onClick={() => setDarkMode(true)}>
+            <Moon className={css.theme} />
+          </span>
+        ) : (
+          <span onClick={() => setDarkMode(false)}>
+            <Sun className={css.theme} />
+          </span>
+        )}
       </nav>
     </header>
   );

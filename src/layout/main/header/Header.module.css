@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   background-color: var(--body-color);
-  z-index: var(--z-index);
+  z-index: 100;
 }
 
 .scroll__header {
@@ -26,4 +26,14 @@ nav {
 
 .nav__logo:hover {
   color: var(--first-color-alt);
+}
+
+.theme {
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme:hover {
+  color: var(--first-color);
 }

@@ -34,6 +34,13 @@
   --z-modal: 1000;
 }
 
+body.light__theme {
+  --title-color: hsl(var(--second-hue), 15%, 15%);
+  --text-color: hsl(var(--second-hue), 8%, 35%);
+  --body-color: hsl(var(--second-hue), 100%, 99%);
+  --container-color: #fff;
+}
+
 @media screen and (min-width: 968px) {
   :root {
     --biggest-font-size: 2.5rem;
