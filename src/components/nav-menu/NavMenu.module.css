@@ -1,18 +1,3 @@
-.nav__menu {
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 1rem;
-  margin: 0 auto;
-  background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
-  width: 60%;
-  border-radius: 4rem;
-  padding: 0.5rem 1.5rem;
-  backdrop-filter: blur(10px);
-}
-
 .nav__list {
   display: flex;
   justify-content: space-between;

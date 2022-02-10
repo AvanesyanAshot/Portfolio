@@ -10,7 +10,8 @@ import useDarkMode from "../../../hooks/useDarkMode";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
-  const [darkMode, setDarkMode] = useDarkMode();
+  const { isDarkMode, enable, disable } = useDarkMode();
+
   useEffect(() => {
     window.addEventListener("scroll", () => setScroll(window.scrollY > 40));
     return () => {
@@ -21,19 +22,24 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={clsx(css.header, { [css.scroll__header]: scroll })}>
+    <header
+      className={clsx(css.header, {
+        [css.scroll__header]: scroll,
+        [css.light__scroll__header]: scroll && isDarkMode,
+      })}
+    >
       <nav className="container">
         <Link className={css.nav__logo} to="/">
           Ashot
         </Link>
         <NavMenu />
 
-        {!darkMode ? (
-          <span onClick={() => setDarkMode(true)}>
+        {!isDarkMode ? (
+          <span onClick={enable}>
             <Moon className={css.theme} />
           </span>
         ) : (
-          <span onClick={() => setDarkMode(false)}>
+          <span onClick={disable}>
             <Sun className={css.theme} />
           </span>
         )}

@@ -1,21 +1,30 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const useMedia = <T,>(queries: string[], values: T[], defaultValue: T) => {
-  const mediaQueryLists = queries.map((q) => window.matchMedia(q));
-  const getValue = () => {
-    const index = mediaQueryLists.findIndex((mql) => mql.matches);
-    return values?.[index] || defaultValue;
+function useMediaQuery(query: string): boolean {
+  const getMatches = (query: string): boolean => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia(query).matches;
+    }
+    return false;
   };
 
-  const [value, setValue] = useState<T>(getValue);
+  const [matches, setMatches] = useState<boolean>(getMatches(query));
+
+  function handleChange() {
+    setMatches(getMatches(query));
+  }
+
   useEffect(() => {
-    const handler = () => setValue(getValue);
-    mediaQueryLists.forEach((mql) => mql.addListener(handler));
-    return () => mediaQueryLists.forEach((mql) => mql.removeListener(handler));
+    const matchMedia = window.matchMedia(query);
+    handleChange();
+    matchMedia.addEventListener("change", handleChange);
+    return () => {
+      matchMedia.removeEventListener("change", handleChange);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [query]);
 
-  return value;
-};
+  return matches;
+}
 
-export default useMedia;
+export default useMediaQuery;

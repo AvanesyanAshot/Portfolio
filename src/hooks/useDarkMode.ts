@@ -1,32 +1,43 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
 import useMedia from "./useMedia";
+import useUpdateEffect from "./useUpdateEffect";
 
-const useDarkMode = () => {
-  const [enabledState, setEnabledState] = useLocalStorage<boolean>(
+const COLOR_SCHEME_QUERY = "(prefers-color-scheme: dark)";
+
+interface UseDarkModeOutput {
+  isDarkMode: boolean;
+  toggle: () => void;
+  enable: () => void;
+  disable: () => void;
+}
+
+function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
+  const isDarkOS = useMedia(COLOR_SCHEME_QUERY);
+  const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
     "light-mode-enabled",
-    false
+    defaultValue ?? isDarkOS ?? false
   );
-
-  const prefersDarkMode = usePrefersDarkMode();
-
-  const enabled = enabledState ?? prefersDarkMode;
+  useUpdateEffect(() => {
+    setDarkMode(isDarkOS);
+  }, [isDarkOS]);
 
   useEffect(() => {
     const className = "light__theme";
     const element = window.document.body;
-    if (enabled) {
+    if (isDarkMode) {
       element.classList.add(className);
     } else {
       element.classList.remove(className);
     }
-  }, [enabled]);
+  }, [isDarkMode]);
 
-  return [enabled, setEnabledState] as const;
-};
-
-function usePrefersDarkMode() {
-  return useMedia<boolean>(["(prefers-color-scheme: light)"], [true], false);
+  return {
+    isDarkMode,
+    toggle: () => setDarkMode((prev) => !prev),
+    enable: () => setDarkMode(true),
+    disable: () => setDarkMode(false),
+  };
 }
 
 export default useDarkMode;

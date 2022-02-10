@@ -1,12 +1,17 @@
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect } from "react";
 import css from "./Contact.module.css";
 import { ReactComponent as Mail } from "../../assets/svg/mail.svg";
 import { ReactComponent as WhatsApp } from "../../assets/svg/whatsapp.svg";
 import { ReactComponent as Telegram } from "../../assets/svg/telegram.svg";
 import { ReactComponent as Right } from "../../assets/svg/arrow-right.svg";
+import useDarkMode from "../../hooks/useDarkMode";
 
 const Contact = () => {
+  const { isDarkMode } = useDarkMode();
+  useEffect(() => {
+    console.log(isDarkMode);
+  }, [isDarkMode]);
   return (
     <section className={clsx(css.contact, "section")} id="contact">
       <span className="section__subtitle">Get in touch</span>

@@ -3,7 +3,7 @@
 :root {
   --header-height: 3.5rem;
 
-  --first-hue: 250;
+  --first-hue: 3112;
   --sat: 66%;
   --lig: 75%;
   --second-hue: 219;
@@ -32,13 +32,6 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
-}
-
-body.light__theme {
-  --title-color: hsl(var(--second-hue), 15%, 15%);
-  --text-color: hsl(var(--second-hue), 8%, 35%);
-  --body-color: hsl(var(--second-hue), 100%, 99%);
-  --container-color: #fff;
 }
 
 @media screen and (min-width: 968px) {
@@ -142,6 +135,21 @@ section {
   color: var(--text-color-light);
 }
 
+.nav__menu {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  margin: 0 auto;
+  background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
+
+  width: 60%;
+  border-radius: 4rem;
+  padding: 0.5rem 1.5rem;
+  backdrop-filter: blur(10px);
+}
 .active__link {
   background: linear-gradient(
     180deg,
@@ -164,4 +172,20 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--second-hue), 8%, 20%);
+}
+
+/* Light Theme */
+body.light__theme {
+  --title-color: hsl(var(--second-hue), 15%, 15%);
+  --text-color: hsl(var(--second-hue), 8%, 35%);
+  --body-color: hsl(var(--second-hue), 100%, 99%);
+  --container-color: #fff;
+}
+
+.light__theme .nav__menu {
+  background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
+}
+
+.light__theme .section__subtitle {
+  color: var(--text-color);
 }

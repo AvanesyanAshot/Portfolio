@@ -1,19 +1,16 @@
 import clsx from "clsx";
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { ReactComponent as Book } from "../../assets/svg/book.svg";
 import { ReactComponent as Briefcase } from "../../assets/svg/briefcase.svg";
 import { ReactComponent as Home } from "../../assets/svg/home.svg";
 import { ReactComponent as Mail } from "../../assets/svg/mail.svg";
 import { ReactComponent as User } from "../../assets/svg/user.svg";
 import { RouteName } from "../../router";
-
 import css from "./NavMenu.module.css";
 
 const NavMenu = () => {
-  const location = useLocation();
   return (
-    <div className={css.nav__menu}>
+    <div className={"nav__menu"}>
       <ul className={css.nav__list}>
         <li className={css.nav__item}>
           <a
