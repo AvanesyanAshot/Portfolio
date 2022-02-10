@@ -135,6 +135,15 @@ section {
   color: var(--text-color-light);
 }
 
+.active__link {
+  background: linear-gradient(
+    180deg,
+    hsla(var(--first-hue), var(--sat), var(--lig), 1),
+    hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
+  );
+  box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
+}
+
 ::-webkit-scrollbar {
   width: 0.6rem;
   border-radius: 0.5rem;

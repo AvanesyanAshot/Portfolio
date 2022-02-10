@@ -17,51 +17,29 @@ const NavMenu = () => {
       <ul className={css.nav__list}>
         <li className={css.nav__item}>
           <a
-            className={clsx(css.nav__link, {
-              [css.active__link]: location.hash === RouteName.HOME,
-            })}
+            className={clsx(css.nav__link, "active__link")}
             href={RouteName.HOME}
           >
             <Home />
           </a>
         </li>
         <li className={css.nav__item}>
-          <a
-            className={clsx(css.nav__link, {
-              [css.active__link]: location.hash === RouteName.ABOUT,
-            })}
-            href={RouteName.ABOUT}
-          >
+          <a className={css.nav__link} href={RouteName.ABOUT}>
             <User />
           </a>
         </li>
         <li className={css.nav__item}>
-          <a
-            className={clsx(css.nav__link, {
-              [css.active__link]: location.hash === RouteName.SKILLS,
-            })}
-            href={RouteName.SKILLS}
-          >
+          <a className={css.nav__link} href={RouteName.SKILLS}>
             <Book />
           </a>
         </li>
         <li className={css.nav__item}>
-          <a
-            className={clsx(css.nav__link, {
-              [css.active__link]: location.hash === RouteName.WORK,
-            })}
-            href={RouteName.WORK}
-          >
+          <a className={css.nav__link} href={RouteName.WORK}>
             <Briefcase />
           </a>
         </li>
         <li className={css.nav__item}>
-          <a
-            className={clsx(css.nav__link, {
-              [css.active__link]: location.hash === RouteName.CONTACT,
-            })}
-            href={RouteName.CONTACT}
-          >
+          <a className={css.nav__link} href={RouteName.CONTACT}>
             <Mail />
           </a>
         </li>

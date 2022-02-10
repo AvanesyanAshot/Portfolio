@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import css from "./Header.module.css";
 import { ReactComponent as Theme } from "../../../assets/svg/moon.svg";
 import clsx from "clsx";
+import NavMenu from "../../../components/nav-menu/NavMenu";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
@@ -21,7 +22,7 @@ const Header = () => {
         <Link className={css.nav__logo} to="/">
           Ashot
         </Link>
-
+        <NavMenu />
         <Theme />
       </nav>
     </header>
